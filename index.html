@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,37 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Book Library</h1>
+        <div class="container">
+            <div class="stats">
+                <h2>Library Log</h2>
+                <h3>Total Books Count: <span>0</span></h3>
+                <h3>Total Books has been read: <span>0</span></h3>
+                <h3>Total Books Not read: <span>0</span></h3>
+            </div>
+            <div class="mode">
+                <h3>Mode:</h3>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>brightness-6</title><path d="M12,18V6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <h3>Order by:</h3>
+        <select name="category" id="category">
+            <option value="insertionDate" selected>insertion date</option>
+            <option value="publishingDate">publishing date</option>
+        </select>
+        <select name="algo" id="algo">
+            <option value="descending" selected>descending</option>
+            <option value="ascending">ascending</option>
+        </select>
+    </nav>
+    <section>
+        
+    </section>
     <script src="Javascript/script.js"></script>
 </body>
 </html>

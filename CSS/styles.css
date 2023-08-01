@@ -1,0 +1,79 @@
+:root {
+    --main-font-color: black;
+    --secondry-main-background: #f2f2f2;
+}
+
+
+.dark-mode {
+    
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    justify-content: space-between;
+    justify-items: end;
+    color: var(--main-font-color);
+}
+
+h1 {
+    font-size: 40px;
+    justify-self: start;
+}
+
+.mode {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.stats {
+    justify-self: end;
+    width: 20rem;
+    margin-bottom: 15px;
+    border: 2px solid ;
+    padding: 20px;
+    line-height: 40px;
+}
+
+.stats h3 {
+    display: flex;
+}
+
+.stats h3 span {
+    margin-left: auto;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+svg {
+    width: 40px;
+}
+
+nav {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    gap: 10px;
+    background-color: var(--secondry-main-background);
+}
+
+nav select {
+    border: 1px solid;
+}
+
