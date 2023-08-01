@@ -1,11 +1,39 @@
 :root {
     --main-font-color: black;
+    --secondry-font-color:white;
     --secondry-main-background: #f2f2f2;
+    --main-background-color: white;
+    --main-border-color: black;
+
 }
 
 
 .dark-mode {
-    
+    --main-font-color: white;
+    --secondry-main-background: #1f2223;
+    --main-background-color: #181a1b;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-font-color: white;
+        --secondry-main-background: #1f2223;
+        --main-background-color: #181a1b;
+        --main-border-color: rgba(24, 77, 104, 0.8);
+        --secondry-font-color:rgba(141,199,229,.8);
+    }
+    .moon {
+        display: none;
+    }
+    svg {
+        filter: invert(100%) sepia(93%) saturate(2%) hue-rotate(202deg) brightness(113%) contrast(101%);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .sun {
+        display: none;
+    }
 }
 
 * {
@@ -13,6 +41,10 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-background-color);
 }
 
 header {
@@ -39,10 +71,11 @@ h1 {
 }
 
 .stats {
+    color: var(--secondry-font-color);
     justify-self: end;
     width: 20rem;
     margin-bottom: 15px;
-    border: 2px solid ;
+    border: 2px solid var(--main-border-color);
     padding: 20px;
     line-height: 40px;
 }
@@ -71,6 +104,7 @@ nav {
     padding: 10px;
     gap: 10px;
     background-color: var(--secondry-main-background);
+    color: var(--main-font-color);
 }
 
 nav select {
