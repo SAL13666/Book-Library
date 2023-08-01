@@ -120,7 +120,10 @@ nav select {
     display: grid;
     gap: 10px;
     position: relative;
+}
 
+.book h3 {
+    font-weight: 500;
 }
 
 .book button {
@@ -134,7 +137,9 @@ nav select {
 }
 
 .read {
+    margin-top: 20px;
     justify-self: end;
+    font-size: .9rem;
 }
 
 .read input {
@@ -146,7 +151,7 @@ nav select {
     width: 50px;
     height: 20px;
     border: 1px solid #303436;
-    background-color: #39806b;
+    background-color: #39806b65;
     border-radius: 15px;
     position: relative;
 }
