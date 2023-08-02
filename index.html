@@ -149,17 +149,18 @@
         <input type="number" name="" id="pages-number" required placeholder="Number of pages" min="1">
         <label for="Language">Language* </label>
         <input type="text" name="" id="Language" required placeholder="Language">
-        <label for="date">Publishing date* </label>
-        <input type="date" name="" id="date" required placeholder="Publishing date">
-        <label for="book status"></label>
+        <label for="book status">Did you read the book?</label>
         <select name="" id="book status">
             <option value="null" disabled selected>Did You Read The Book?</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
         </select>
-        <button type="submit">Add</button>
-        <button type="reset">clear</button>
+        <div class="control">
+            <button type="submit">Add</button>
+            <button type="reset">clear</button>
+        </div>
     </form>
+    <div class="overlay"></div>
     <script src="Javascript/script.js"></script>
 </body>
 </html>
