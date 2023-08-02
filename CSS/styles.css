@@ -4,7 +4,8 @@
     --secondry-main-background: #f2f2f2;
     --main-background-color: white;
     --main-border-color: black;
-
+    --main-svg-color: filter: invert(0%) sepia(93%) saturate(0%) hue-rotate(284deg) brightness(107%) contrast(107%);
+    --secondry-font-color:black;
 }
 
 html {
@@ -17,28 +18,7 @@ html {
     --main-background-color: #181a1b;
     --main-border-color: rgba(24, 77, 104, 0.8);
     --secondry-font-color:rgba(141,199,229,.8);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --main-font-color: white;
-        --secondry-main-background: #1f2223;
-        --main-background-color: #181a1b;
-        --main-border-color: rgba(24, 77, 104, 0.8);
-        --secondry-font-color:rgba(141,199,229,.8);
-    }
-    .moon {
-        display: none;
-    }
-    svg {
-        filter: invert(100%) sepia(93%) saturate(2%) hue-rotate(202deg) brightness(113%) contrast(101%);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    .sun {
-        display: none;
-    }
+    --main-svg-color: invert(100%) sepia(93%) saturate(2%) hue-rotate(202deg) brightness(113%) contrast(101%);
 }
 
 * {
@@ -94,6 +74,10 @@ h1 {
     margin-left: auto;
 }
 
+.not-visible {
+    display: none;
+}
+
 button {
     background-color: transparent;
     border: none;
@@ -102,6 +86,7 @@ button {
 
 svg {
     width: 40px;
+    filter: var(--main-svg-color);
 }
 
 nav {
