@@ -6,7 +6,7 @@
     <title>Book Library</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
-<body class="">
+<body>
     <header>
         <h1>Book Library</h1>
         <div class="container">
@@ -36,111 +36,15 @@
             <option value="ascending">ascending</option>
         </select>
     </nav>
-    <section>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-        <div class="book">
-            <button class="X">X</button>
-            <h2>Game Of Thrones</h2>
-            <h3>by: George R. R. Martin</h3>
-            <h3>Number Of Pages: 694</h3>
-            <h3>Language: English</h3>
-            <h3>Published: July 1 1996</h3>
-            <div class="read">
-                <label for="control">Mark As Read: </label>
-                <span>                
-                    <input type="checkbox" name="" id="control" checked>
-                </span>
-            </div>
-        </div>
-    </section>
+    <section></section>
     <div class="add-book">
         <button type="button">+</button>
     </div>
     <form>
-        <h2>Add new book</h2>
+        <div class="header">
+            <h2>Add new book</h2>
+            <button>X</button>
+        </div>
         <label for="book-name">Book title* </label>
         <input type="text" name="" id="book-name" required placeholder="book name">
         <label for="book-author">Book author* </label>
@@ -149,8 +53,8 @@
         <input type="number" name="" id="pages-number" required placeholder="Number of pages" min="1">
         <label for="Language">Language* </label>
         <input type="text" name="" id="Language" required placeholder="Language">
-        <label for="book status">Did you read the book?</label>
-        <select name="" id="book status">
+        <label for="book-status">Did you read the book?</label>
+        <select name="" id="book-status">
             <option value="null" disabled selected>Did You Read The Book?</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>

@@ -8,9 +8,6 @@
     --secondry-font-color:black;
 }
 
-html {
-    position: relative;
-}
 
 .dark-mode {
     --main-font-color: white;
@@ -30,7 +27,8 @@ html {
 
 body {
     background-color: var(--main-background-color);
-    
+    height: 100vh;
+    position: relative;
 }
 
 header {
@@ -161,7 +159,7 @@ nav select {
 section {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
     gap: 20px;
 }
 
@@ -169,7 +167,7 @@ section {
     background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
     width: 50px;
     height: 50px;
-    position: sticky;
+    position: fixed;
     bottom: 20px;
     margin-left: 95%;
     border-radius: 50%;
@@ -205,6 +203,17 @@ form {
     display: none;
 }
 
+form .header {
+    display: flex;
+    grid-template-columns: 1fr 30px;
+    justify-content: space-between;
+}
+
+form .header button {
+    color: var(--main-font-color);
+    font-size: 30px;
+}
+
 form label {
     font-size: 20px;
 }
@@ -214,7 +223,7 @@ form input {
     background-color: var(--main-border-color);
     border: none;
     outline: none;
-    caret-color: var(--main-border-color);
+    caret-color: var(--main-font-color);
     color: var(--main-font-color);
 }
 
@@ -240,6 +249,7 @@ form .control button {
     font-size: 20px;
     padding: 10px;
 }
+
 
 .overlay {
     display: none;
