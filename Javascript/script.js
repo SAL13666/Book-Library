@@ -55,31 +55,35 @@ document.forms[0].addEventListener("submit", function(e) {
         element.remove();
     })    
     displayBooks();
-
+    removeBook();
 })
 
 function addBookToLibrary(book) {
     myLibarary.push(book);
 }
 
-
+function removeBook() {
+    document.querySelectorAll(".book > button").forEach(function(e) {
+        e.addEventListener("click", function() {
+            e.parentElement.remove();
+            myLibarary.splice(e.id, 1);
+        })
+    })
+}
 
 function displayBooks() {
     myLibarary.forEach(function(e) {
         let theBook = document.createElement("div");
         theBook.classList.add("book");
+        theBook.setAttribute("id", myLibarary.length);
         theBook.innerHTML = `
         <button class="X">X</button>
         <h2>${e.bookName}</h2>
         <h3>by: ${e.bookAuthor}</h3>
         <h3>Number Of Pages: ${e.numberOfPages}</h3>
         <h3>Language: ${e.bookLanguage}</h3>
-        <div class="read">
-            <label for="control">Mark As Read: </label>
-            <span>                
-                <input type="checkbox" name="" id="control" checked>
-            </span>
-        </div>`;
+        `;
         document.querySelector("section").appendChild(theBook);
     })
 }
+
