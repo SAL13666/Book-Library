@@ -56,6 +56,7 @@ document.forms[0].addEventListener("submit", function(e) {
     })    
     displayBooks();
     removeBook();
+    updateStats();
 })
 
 function addBookToLibrary(book) {
@@ -69,7 +70,8 @@ function removeBook() {
             myLibarary.splice(e.id, 1);
         })
     })
-}
+    updateStats();
+};
 
 function displayBooks() {
     myLibarary.forEach(function(e) {
@@ -85,5 +87,19 @@ function displayBooks() {
         `;
         document.querySelector("section").appendChild(theBook);
     })
-}
+};
 
+function updateStats() {
+    let counter = 0;
+    document.querySelectorAll(".stats h3 span")[0].textContent = myLibarary.length;
+    for(let i = 0; i < myLibarary.length; i++) {
+        if(myLibarary[i].bookRead === "yes") {
+            counter++;
+        }
+    }
+    document.querySelectorAll(".stats h3 span")[1].textContent = counter;
+    document.querySelectorAll(".stats h3 span")[2].textContent = myLibarary.length - counter;
+    console.log(counter);
+};
+
+    console.log();
