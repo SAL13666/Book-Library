@@ -87,22 +87,6 @@ svg {
     filter: var(--main-svg-color);
 }
 
-nav {
-    display: flex;
-    margin: 20px;
-    padding: 10px;
-    gap: 10px;
-    background-color: var(--secondry-main-background);
-    color: var(--main-font-color);
-}
-
-nav select {
-    border: 1px solid;
-    background-color: var(--secondry-main-background);
-    border-color: var(--main-border-color);
-    color: var(--main-font-color);
-}
-
 .book {
     color: var(--main-font-color);
     padding: 20px;
