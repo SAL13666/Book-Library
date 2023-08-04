@@ -68,9 +68,9 @@ function removeBook() {
         e.addEventListener("click", function() {
             e.parentElement.remove();
             myLibarary.splice(e.id, 1);
+            updateStats();
         })
     })
-    updateStats();
 };
 
 function displayBooks() {
@@ -99,7 +99,4 @@ function updateStats() {
     }
     document.querySelectorAll(".stats h3 span")[1].textContent = counter;
     document.querySelectorAll(".stats h3 span")[2].textContent = myLibarary.length - counter;
-    console.log(counter);
 };
-
-    console.log();
